@@ -13,6 +13,7 @@
 		BC06CF202A41CB8D008A1232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC06CF1E2A41CB8D008A1232 /* Main.storyboard */; };
 		BC06CF222A41CB8E008A1232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC06CF212A41CB8E008A1232 /* Assets.xcassets */; };
 		BC06CF252A41CB8E008A1232 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC06CF232A41CB8E008A1232 /* LaunchScreen.storyboard */; };
+		BC06CF2E2A41CCDB008A1232 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = BC06CF2D2A41CCDB008A1232 /* iOSSnapshotTestCase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC06CF2E2A41CCDB008A1232 /* iOSSnapshotTestCase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = SampleAppDependencies;
+			packageProductDependencies = (
+				BC06CF2D2A41CCDB008A1232 /* iOSSnapshotTestCase */,
+			);
 			productName = SampleAppDependencies;
 			productReference = BC06CF152A41CB8D008A1232 /* SampleAppDependencies.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = BC06CF0C2A41CB8D008A1232;
+			packageReferences = (
+				BC06CF2C2A41CCDB008A1232 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
+			);
 			productRefGroup = BC06CF162A41CB8D008A1232 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BC06CF2C2A41CCDB008A1232 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/uber/ios-snapshot-test-case.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BC06CF2D2A41CCDB008A1232 /* iOSSnapshotTestCase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC06CF2C2A41CCDB008A1232 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
+			productName = iOSSnapshotTestCase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC06CF0D2A41CB8D008A1232 /* Project object */;
 }
